@@ -1,5 +1,14 @@
+# Environment and secrets (never push)
 .env
+.env.*
+.env.local
+.env.*.local
+*.env
+
+# Dot files (local / sensitive)
 .DS_Store
+.bashrc
+.cursorignore
 **/__pycache__
 **/_pycache_
 docs/.prep/.canvas
