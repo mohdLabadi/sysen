@@ -11,7 +11,7 @@ import requests
 from fastapi import FastAPI, HTTPException, Query
 from pydantic import BaseModel
 
-from env_utils import load_env_from_dotenv
+from .env_utils import load_env_from_dotenv
 
 
 def get_supabase_config() -> dict:
