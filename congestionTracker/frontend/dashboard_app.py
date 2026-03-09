@@ -24,20 +24,8 @@ def main() -> None:
     st.markdown(
         """
 <style>
-/* Dark background and bright text */
-.main {
-  background-color: #0f1b29;
-  color: #f9fafb;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
-}
-
-section[data-testid="stSidebar"] {
-  background-color: #000000;
-}
-
-h1, h2, h3, h4 {
-  color: #f9fafb;
-}
+/* Keep base colors from the active Streamlit theme so text always contrasts.
+   Only style specific components and anchors. */
 
 .hero-card {
   background: radial-gradient(circle at top left, #1d4ed8, #020617);
@@ -45,6 +33,7 @@ h1, h2, h3, h4 {
   padding: 20px 26px;
   border: 1px solid rgba(148, 163, 184, 0.4);
   box-shadow: 0 18px 45px rgba(15, 23, 42, 0.9);
+  color: #f9fafb;
 }
 
 .hero-title {
@@ -55,7 +44,6 @@ h1, h2, h3, h4 {
 
 .hero-subtitle {
   font-size: 0.95rem;
-  color: #f9fafb;
   opacity: 0.98;
 }
 
@@ -72,7 +60,6 @@ h1, h2, h3, h4 {
 
 .hero-metric {
   font-size: 0.85rem;
-  color: #f9fafb;
 }
 
 .severity-dot {
@@ -89,23 +76,13 @@ h1, h2, h3, h4 {
 
 .legend-text {
   font-size: 0.80rem;
-  color: #f9fafb;
-  opacity: 1.0;
 }
 
-/* Make tabs and metrics brighter and clearer */
-button[role="tab"] p {
-  color: #f9fafb !important;
-  font-weight: 600 !important;
-}
-
-div[data-testid="stMetricLabel"] {
-  color: #f9fafb !important;
-  font-weight: 600 !important;
-}
-
-div[data-testid="stMetricValue"] {
-  color: #f9fafb !important;
+/* Anchor offset so headings are not hidden under Streamlit's top bar */
+.section-anchor {
+  position: relative;
+  top: -80px;   /* adjust if Streamlit header height changes */
+  visibility: hidden;
 }
 </style>
         """,
@@ -128,7 +105,7 @@ div[data-testid="stMetricValue"] {
 
     with main_col:
         # Hero section
-        st.markdown('<a name="hero"></a>', unsafe_allow_html=True)
+        st.markdown('<div id="hero" class="section-anchor"></div>', unsafe_allow_html=True)
         st.markdown(
             """
 <div class="hero-card">
@@ -159,7 +136,7 @@ div[data-testid="stMetricValue"] {
         )
 
     # Problem + solution + how-it-works + benefits sections
-        st.markdown('<a name="problem"></a>', unsafe_allow_html=True)
+        st.markdown('<div id="problem" class="section-anchor"></div>', unsafe_allow_html=True)
         st.markdown("## The problem")
         st.write(
             "- Dispatchers can’t see **which intersections are failing right now** in one place.\n"
@@ -167,7 +144,7 @@ div[data-testid="stMetricValue"] {
             "- Raw numbers don’t translate into **plain‑language routing advice**."
         )
 
-        st.markdown('<a name="solution"></a>', unsafe_allow_html=True)
+        st.markdown('<div id="solution" class="section-anchor"></div>', unsafe_allow_html=True)
         st.markdown("## Our solution")
         st.write(
             "- A live intersection‑level dashboard with **5‑minute congestion scores**.\n"
@@ -175,7 +152,7 @@ div[data-testid="stMetricValue"] {
             "- An AI assistant that **speaks like a dispatcher**, recommending safer routes."
         )
 
-        st.markdown('<a name="how-it-works"></a>', unsafe_allow_html=True)
+        st.markdown('<div id="how-it-works" class="section-anchor"></div>', unsafe_allow_html=True)
         st.markdown("## How it works (3 steps)")
         step1, step2, step3 = st.columns(3)
         with step1:
@@ -194,7 +171,7 @@ div[data-testid="stMetricValue"] {
             "```"
         )
 
-        st.markdown('<a name="benefits"></a>', unsafe_allow_html=True)
+        st.markdown('<div id="benefits" class="section-anchor"></div>', unsafe_allow_html=True)
         st.markdown("## Who benefits?")
         b_left, b_right = st.columns(2)
         with b_left:
@@ -212,7 +189,7 @@ div[data-testid="stMetricValue"] {
                 "- Use the API for further analysis or reporting."
             )
 
-        st.markdown('<a name="live-demo"></a>', unsafe_allow_html=True)
+        st.markdown('<div id="live-demo" class="section-anchor"></div>', unsafe_allow_html=True)
         st.markdown("## Live congestion dashboard")
         st.write("Use the tabs below to explore live congestion, trends, the city map, and AI insights.")
 
