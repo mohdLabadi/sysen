@@ -1,0 +1,96 @@
+prompt_id,day_of_week,hour_of_day,expected_vehicles,report_text,word_count
+A,5,13,17.2,"**Brussels Vehicle‑Traffic Report – Friday at 13:00**
+
+**Date & Time:** Friday, 13:00 (local time)  
+**Location:** Central Brussels (major arterial roads and city‑centre junctions)  
+**Predicted Traffic Volume:** **17.2 vehicles per minute** (≈ 1 032 vehicles per hour)
+
+**Overview**  
+The traffic model for Friday 13:00 projects a moderate flow of vehicles through Brussels’ core corridors. The figure of 17.2 vehicles per minute reflects a slight uptick compared with the weekday average (≈ 15 vehicles/min) but remains below the peak midday surge (≈ 25 vehicles/min) that typically occurs around 12:30–13:30 in the city centre.
+
+**Key Influencing Factors**  
+- **Business‑District Activity:** Mid‑afternoon commutes from the financial district and surrounding offices increase vehicle entry into the inner ring.  
+- **Public Transport Peak:** High demand on the metro and tram lines during this slot feeds more private vehicles to nearby parking lots.  
+- **Roadworks & Events:** No major roadworks or large public events are scheduled for this Friday, which keeps congestion moderate.
+
+**Implications & Recommendations**  
+- **Traffic Management:** Maintain current signal timing with a slight priority for south‑bound arterial lanes to accommodate the incremental flow.  
+- **Parking & Alternative Modes:** Encourage use of park‑and‑ride and cycling infrastructure to reduce on‑street pressure.  
+- **Public Communication:** Deploy real‑time traffic updates via the Brussels mobility app to inform commuters of any unexpected delays.
+
+**Conclusion**  
+The predicted traffic volume of 17.2 vehicles per minute indicates a stable, manageable traffic situation for Friday at 13:00. Standard operational protocols should suffice to keep the flow efficient and minimize delays.",247
+A,1,14,13.7,"**Brussels Vehicle Traffic Forecast – Monday, 14:00**
+
+**Date:** Monday, [Insert Date]  
+**Time:** 14:00 h (2 pm)  
+**Location:** Central Brussels (Major arterial roads & key intersections)
+
+| Metric | Value |
+|--------|-------|
+| **Predicted vehicle flow** | **13.7 vehicles/minute** |
+| **Average speed** | ~35 km/h (typical for peak‑hour traffic) |
+| **Expected congestion level** | Mild – short delays of 1–2 min at peak junctions |
+| **Key affected routes** | Rue de la Loi, Rue Royale, Avenue de la Reine, Boulevard Anspach |
+
+### Summary
+At 2 pm on Monday, Brussels is projected to experience a moderate volume of vehicular traffic, with an average flow of 13.7 vehicles per minute across the central corridor. This level corresponds to a mild congestion scenario, typically resulting in brief delays of 1–2 minutes at major junctions. Drivers are advised to allow for slight extra travel time when navigating the city center at this hour.
+
+### Recommendations
+- **Alternative routes:** Consider detours via the peripheral ring roads (R0 and R1) if encountering congestion.
+- **Public transport:** Utilize Metro lines 1 or 5, or tram 5, to avoid minor delays.
+- **Timing adjustment:** If possible, schedule non-essential travel slightly earlier or later to avoid peak traffic.
+
+*Prepared by: Brussels Traffic Management Service*",208
+A,6,9,19.2,"**Brussels Vehicle Traffic Report – Saturday, 09:00 h**
+
+**Overview**  
+At 09:00 on a typical Saturday, traffic flow in Brussels is predicted to average **19.2 vehicles per minute**. This figure represents a moderate level of vehicular movement, reflecting the usual weekend pattern where commuter traffic has largely subsided but local activity—shopping, leisure, and sporadic public transport—keeps the streets active.
+
+**Key Points**  
+
+| Item | Detail |
+|------|--------|
+| **Predicted rate** | 19.2 vehicles/min |
+| **Typical drivers** | Local residents, shoppers, tourists, and service vehicles |
+| **Road network** | Main arteries (e.g., Avenue de la Liberté, Rue de la Loi) and secondary streets |
+| **Influencing factors** |  
+- Weekend leisure activities (markets, cafés)  
+- Public transport schedules (fewer trains, but still operational)  
+- Ongoing construction or roadworks (if any) |  
+
+**Implications**  
+
+- **Traffic management**: The predicted flow is within comfortable limits for the current road capacity, so no significant congestion is expected.  
+- **Public transport**: Buses and trams should maintain similar schedules, with slight adjustments for lower passenger demand.  
+- **Urban planning**: Municipal traffic controllers can focus on minor bottlenecks rather than large-scale interventions.  
+
+**Conclusion**  
+The forecast of 19.2 vehicles per minute at 09:00 Saturday suggests a smooth traffic environment across Brussels’ main thoroughfares. While occasional localized slow‑downs may occur near popular spots, overall mobility remains efficient, supporting both local commuting and leisure activities.",225
+B,5,13,17.2,"SUMMARY  
+The traffic forecast for this Friday (day_of_week=5) at 13:00 indicates moderate flow.  
+
+NUMBERS  
+Predicted vehicle count: 17.2 vehicles per minute.  
+
+RECOMMENDATION  
+Maintain current signage and monitor flow; no additional measures needed based on the forecast.",36
+B,1,14,13.7,"SUMMARY  
+This Monday at 14:00, traffic flow is moderate. The model forecasts a steady rate.  
+
+NUMBERS  
+The predicted vehicle count is 13.7 vehicles per minute.  
+
+RECOMMENDATION  
+Maintain current signal timing. Monitor for sudden increases; add sensors if congestion appears.",39
+B,6,9,19.2,"SUMMARY
+We analyze traffic for Saturday at 09:00. The forecasted flow indicates a moderate volume for the morning peak.
+
+NUMBERS
+Predicted count is 19.2 vehicles per minute.
+
+RECOMMENDATION
+Maintain current signal phasing; consider adding a short green for the main lane to accommodate the anticipated flow. No additional data required.",50
+C,5,13,17.2,"Friday, 13:00: Predicted flow is 17.2 vehicles per minute. This moderate figure sits well below the usual commuter surges of 07:00‑09:00 and 17:00‑19:00, where counts are substantially higher. Given the relatively low volume, the current signal phasing and cycle lengths are adequate. Therefore, no immediate intervention is necessary; simply maintain the existing signal timings to preserve smooth operations. Monitoring continues, and traffic counts will be reviewed hourly to detect any deviations. If volumes rise, the existing cycle can be re‑evaluated.",80
+C,1,14,13.7,"Monday, 14:00: The model predicts 13.7 vehicles per minute over the 1‑minute sampling interval. This volume is markedly lower than the typical commuter peaks of 07:00‑09:00 and 17:00‑19:00, where counts usually exceed 30 vehicles per minute and traffic becomes congested. With the mid‑afternoon period remaining in a relatively light state, the priority should be to maintain smooth flow and avoid creating bottlenecks as traffic builds toward the evening rush. Accordingly, I recommend extending the green phase on the main arterial by 15 seconds during this hour, which will keep vehicle queues short and prepare the corridor for the upcoming peak.",100
+C,6,9,19.2,"On Saturday at 09:00 the predicted vehicle count is 19.2 vehicles per minute, based on the 1 minute sampling interval. This figure is noticeably lower than the typical morning commuter peak (07:00‑09:00) which often exceeds 30 vehicles per minute, and far below the evening rush (17:00‑19:00). Because the flow is moderate but still significant, a small adjustment to signal timing can keep the corridor running smoothly. Therefore, extend the green phase for the main east‑west direction by 3 seconds during this hour to accommodate the 19.2 vehicles per minute without creating backups.",92

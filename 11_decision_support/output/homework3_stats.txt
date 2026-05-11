@@ -1,0 +1,68 @@
+========================================================================
+Statistical Comparison of Prompts A / B / C
+========================================================================
+
+Sample size per prompt: {'A': 3, 'B': 3, 'C': 3}
+
+Descriptive statistics — composite_score by prompt:
+             mean     std    min     max
+prompt_id                               
+A          0.5075  0.0225  0.485  0.5300
+B          0.6917  0.0946  0.625  0.8000
+C          0.6758  0.0851  0.580  0.7429
+
+Per-criterion means by prompt:
+           numerical_grounding  unit_specification  temporal_specificity  decision_actionability  hallucination_risk
+prompt_id                                                                                                           
+A                        0.247                 1.0                   3.0                   4.333               0.667
+B                        0.417                 1.0                   3.0                   4.333               0.000
+C                        0.175                 1.0                   3.0                   6.667               0.300
+
+Bartlett's test for homogeneity of variance: W = 2.7166, p = 0.2571
+  -> equal variances OK (standard ANOVA)
+
+One-way ANOVA (composite_score ~ prompt_id):
+   Source     SS  DF     MS     F  p_unc    np2
+prompt_id 0.0625   2 0.0313 5.611 0.0423 0.6516
+   Within 0.0334   6 0.0056   NaN    NaN    NaN
+  -> p = 0.0423  (SIGNIFICANT — at least one prompt differs)
+
+Pairwise t-tests (Bonferroni-corrected):
+ Contrast A B  Paired  Parametric       T  dof alternative  p_unc  p_corr p_adjust  BF10  hedges
+prompt_id A B   False        True -3.2796  4.0   two-sided 0.0305  0.0915     bonf  2.63 -2.1422
+prompt_id A C   False        True -3.3107  4.0   two-sided 0.0296  0.0889     bonf 2.674 -2.1626
+prompt_id B C   False        True  0.2158  4.0   two-sided 0.8397  1.0000     bonf  0.57  0.1410
+
+Best mean composite_score: prompt B = 0.6917
+  ⚠️  no pairwise comparison reaches p<0.05 after Bonferroni correction (N per prompt = 3 is small — rerun with --n 20 for more power)
+
+OLS regression: composite_score ~ C(prompt_id, ref='A') + word_count
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:        composite_score   R-squared:                       0.653
+Model:                            OLS   Adj. R-squared:                  0.444
+Method:                 Least Squares   F-statistic:                     3.130
+Date:                Mon, 11 May 2026   Prob (F-statistic):              0.126
+Time:                        03:04:47   Log-Likelihood:                 12.422
+No. Observations:                   9   AIC:                            -16.84
+Df Residuals:                       5   BIC:                            -16.05
+Df Model:                           3                                         
+Covariance Type:            nonrobust                                         
+===============================================================================================================
+                                                  coef    std err          t      P>|t|      [0.025      0.975]
+---------------------------------------------------------------------------------------------------------------
+Intercept                                       0.4415      0.566      0.780      0.471      -1.014       1.897
+C(prompt_id, Treatment(reference='A'))[T.B]     0.2380      0.465      0.512      0.631      -0.958       1.434
+C(prompt_id, Treatment(reference='A'))[T.C]     0.2079      0.345      0.603      0.573      -0.679       1.095
+word_count                                      0.0003      0.002      0.117      0.912      -0.006       0.007
+==============================================================================
+Omnibus:                        0.121   Durbin-Watson:                   2.875
+Prob(Omnibus):                  0.941   Jarque-Bera (JB):                0.306
+Skew:                           0.175   Prob(JB):                        0.858
+Kurtosis:                       2.166   Cond. No.                     4.26e+03
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 4.26e+03. This might indicate that there are
+strong multicollinearity or other numerical problems.

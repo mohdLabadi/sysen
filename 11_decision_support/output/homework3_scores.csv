@@ -1,0 +1,10 @@
+prompt_id,day_of_week,hour_of_day,expected_vehicles,word_count,numerical_grounding,unit_specification,temporal_specificity,decision_actionability,hallucination_risk,validator_rationale,composite_score
+A,5,13,17.2,247,0.15789473684210525,1,3,5,0.7,"Adds many unstated averages and conditions; actions are vague, not directly tied to the exact count.",0.5073684210526316
+A,1,14,13.7,208,0.25,1,3,4,0.7,"Report matches source count but adds unsupported details (speed, routes, congestion) increasing hallucination risk; advice is generic, not count‑specific, yielding moderate actionability.",0.48500000000000004
+A,6,9,19.2,225,0.3333333333333333,1,3,4,0.6,"Provides generic guidance for operators, no specific action linked to 19.2 vpm; includes plausible but unverified street names and details.",0.53
+B,5,13,17.2,36,0.25,1,3,4,0.0,"Accurately reflects source facts; guidance is generic (maintain signage, monitor) without specific action linked to the 17.2 vehicles/min prediction.",0.625
+B,1,14,13.7,39,0.6666666666666666,1,3,5,0.0,"Offers concrete steps (maintain timing, monitor, add sensors) though not directly linked to the exact count, thus moderately actionable.",0.8
+B,6,9,19.2,50,0.3333333333333333,1,3,4,0.0,"Recommendation offers generic guidance (maintain phasing, consider short green) without explicit action linked to the 19.2 vehicles/min count.",0.6500000000000001
+C,5,13,17.2,80,0.18181818181818182,1,3,6,0.0,"Report accurately cites source data and gives concrete recommendation to keep current signal timings, with monitoring, no fabricated details.",0.7045454545454546
+C,1,14,13.7,100,0.14285714285714285,1,3,7,0.0,"Provides a precise, time‑bound signal adjustment directly linked to the 13.7 veh/min forecast; no unsupported factual claims detected.",0.7428571428571429
+C,6,9,19.2,92,0.2,1,3,7,0.9,"Specific action given, but peak traffic figures and signal timing suggestion are not in source, indicating high hallucination risk.",0.5800000000000001
